@@ -19,6 +19,7 @@ async function main(params) {
 }
 app.set("view engine","ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded({extended:true}));
 
 const port = 8080;
 app.get('/', (req, res) => {
@@ -32,7 +33,25 @@ app.get("/listings",async (req,res)=>{
     const listings=await Listing.find({})
     res.render("listings/index.ejs", { listings });
 })
+//accept create new list request
+app.get("/listings/new",(req,res)=>{
+    res.render("listings/new.ejs");
+})
+//show roiute
+app.get("/listings/:id",async (req,res)=>{
+    const {id}=req.params;
+    const listing=await Listing.findById(id)
+    res.render("listings/show.ejs", { listing });
+})
+//create route
+app.post("/listings",async (req,res)=>{
+    let listing=req.body;
+    console.log(listing);
+    const newListing=new Listing(req.body.listing);
+    await newListing.save();
+    res.redirect("/listings");
 
+})
 
 
 // //app.get("/testListing",async (req,res)=>{

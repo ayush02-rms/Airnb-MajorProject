@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>List requires information</h1>
+        <form method="POST" action="/listings">
+            <input type="text" name="listing[title]" name="title"placeholder="write your title"><br><br>
+
+            <textarea name="listing[description]" required></textarea><br><br>
+            <input type="text" name="listing[image]" placeholder="Image URL" ><br><br>
+            <input type="number" name="listing[price]" placeholder="Price" ><br><br>
+
+
+            <input type="text" id="location" name="listing[location]" required><br><br>
+
+            <input type="text" id="country" name="listing[country]" required><br><br>
+
+            <button type="submit">Create Listing</button>
+    </body>   
+</html>

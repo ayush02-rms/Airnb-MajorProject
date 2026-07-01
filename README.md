@@ -1,1 +1,1 @@
-# index route(to show all listings(title) in form of link)
+# Creat new route with the helpo of ejs and post request
