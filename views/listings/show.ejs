@@ -13,5 +13,7 @@
         <p><strong>Price:</strong> $<%= listing.price.toLocaleString("en-IN") %></p>
         <p><strong>Location:</strong> <%= listing.location %></p>
         <p><strong>Country:</strong> <%= listing.country %></p>
+        <a href="/listings/<%= listing._id %>/edit">Edit</a>
+
     </body>   
 </html>

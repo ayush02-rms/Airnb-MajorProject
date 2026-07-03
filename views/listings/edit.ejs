@@ -1,0 +1,21 @@
+!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Listings</h1>
+        <form method="Post" action="/listings/<%= listing._id %>?_method=PUT">
+            <input type="text" placeholder="write your title" name="listing[title]" value="<%= listing.title %>"><br><br>
+            <textarea name="listing[description]" required><%=listing.description %></textarea><br><br>
+            <input type="text" name="listing[image]" placeholder="Image URL" value="<%= listing.image %>"><br><br>
+            <input type="number" name="listing[price]" placeholder="Price" value="<%= listing.price %>"><br><br>
+            <input type="text" id="location" name="listing[location]" required value  ="<%= listing.location %>"><br><br>
+            <input type="text" id="country" name="listing[country]" required value  ="<%= listing.country %>"><br><br>  
+            <button type="submit">Update Listing</button>
+        </form>
+        
+</html>
