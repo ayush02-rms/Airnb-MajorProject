@@ -67,10 +67,16 @@ app.get("/listings/:id/edit",async (req,res)=>{
 //update route
 app.put("/listings/:id",async (req,res)=>{
     const {id}=req.params;
-    const listing=await Listing.findByIdAndUpdate(id,req.body.listing,{runValidators:true,new:true});
-    console.log(req.body.listing);
+    const listing=await Listing.findByIdAndUpdate(id,{...req.body.listing},{runValidators:true,new:true});
     console.log(req.body.listing.title);
     res.redirect(`/listings/${listing._id}`);
+})
+//delte route
+app.delete("/listings/:id/delete",async (req,res)=>{
+    const {id}=req.params;
+    await Listing.findByIdAndDelete(id);
+    console.log("deleted");
+    res.redirect("/listings");
 })
 
 
