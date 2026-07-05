@@ -1,2 +1,2 @@
 # Styling Our Project
-# Navbar 
+# Footer (with styling)
