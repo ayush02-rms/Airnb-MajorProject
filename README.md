@@ -1,2 +1,2 @@
 # Styling Our Project
-# card styling(indiviudla list)
+# Styling new Listing(using bootsrtap form)
