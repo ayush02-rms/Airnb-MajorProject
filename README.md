@@ -1,2 +1,2 @@
 # Styling Our Project
-# Footer (with styling)
+# card styling(indiviudla list)
