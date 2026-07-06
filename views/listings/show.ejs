@@ -1,4 +1,4 @@
-<% layout('layouts/boilerplate.ejs') %>
+<% layout("layouts/boilerplate.ejs") %>
     <body>
         <h1>Listing Details</h1>
         <p><strong>Title:</strong> <%= listing.title %></p>
@@ -6,7 +6,8 @@
         <p><strong>Price:</strong> $<%= listing.price.toLocaleString("en-IN") %></p>
         <p><strong>Location:</strong> <%= listing.location %></p>
         <p><strong>Country:</strong> <%= listing.country %></p>
-        <a href="/listings/<%= listing._id %>/edit">Edit</a>
+        <a href="/listings/<%= listing._id %>/edit" class="btn btn-primary">Edit Listing</a><br><br>
+
         <form method="POST" action="/listings/<%= listing._id %>/delete?_method=DELETE">
             <button type="submit">Delete</button>
         </form>

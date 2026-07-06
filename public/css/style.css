@@ -1,4 +1,4 @@
-.body{
+body{
     font-family: "Plus Jakarta Sans", sans-serif;
     display:flex;
     flex-direction:column;
@@ -6,7 +6,7 @@
 
 }
 .container{
-    flex:1;
+    flex:1 !important;
 }
 
 
