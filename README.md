@@ -1,2 +1,2 @@
 # Styling Our Project
-# Edit listing styling(form with bootsrtap)
+# Show list(using bootstrap form and card)

@@ -86,3 +86,11 @@ body{
     border:none !important;
 
 }
+/*Show image in show page*/
+.show-img{
+    height:30vh;
+
+}
+.btn-s{
+    display:flex;
+}
